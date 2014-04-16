@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2007 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,13 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit device specific files
-$(call inherit-product, device/samsung/tassve/device_tassve.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Overrides
-PRODUCT_NAME := full_tassve
-PRODUCT_DEVICE := tassve
-PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := GT-S53570i
-PRODUCT_MANUFACTURER := Samsung
-PRODUCT_CHARACTERISTICS := phone
+include $(CLEAR_VARS)
+
+ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
