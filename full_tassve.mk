@@ -19,6 +19,6 @@ $(call inherit-product, device/samsung/tassve/device_tassve.mk)
 PRODUCT_NAME := full_tassve
 PRODUCT_DEVICE := tassve
 PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := GT-S53570i
+PRODUCT_MODEL := GT-S5570i
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_CHARACTERISTICS := phone
