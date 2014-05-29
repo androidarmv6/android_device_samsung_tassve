@@ -12,29 +12,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit products
-$(call inherit-product, device/samsung/bcm21553-common/common.mk)
-$(call inherit-product, vendor/samsung/tassve/vendor.mk)
-
-# Add device package overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/tassve/overlay
-
 # Init files
 PRODUCT_COPY_FILES += \
-    device/samsung/tassve/ramdisk/init.tassve.sensors.rc:root/init.tassve.sensors.rc
+    device/samsung/tassve/ramdisk/init.gt-s5570iboard.sensors.rc:root/init.gt-s5570iboard.sensors.rc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
+    frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
 
 # Enable repeatable keys in CWM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.enable_key_repeat=true \
     ro.cwm.repeatable_keys=114,115
 
+# Inherit products
+$(call inherit-product, device/samsung/bcm21553-common/common.mk)
+$(call inherit-product, vendor/samsung/tassve/vendor.mk)
+
+
 # LDPI assets
 PRODUCT_AAPT_CONFIG := normal mdpi ldpi
 PRODUCT_AAPT_PREF_CONFIG := ldpi
+$(call inherit-product, device/ldpi-common/ldpi.mk)
+
+# Add device package overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/tassve/overlay
 
 # Prebuilt Kernel - DELETE from the package
 ifeq ($(TARGET_PREBUILT_KERNEL),)

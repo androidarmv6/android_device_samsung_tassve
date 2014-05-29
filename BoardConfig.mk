@@ -17,28 +17,26 @@
 # Product-specific compile-time definitions.
 #
 
-# Board
-TARGET_BOARD_PLATFORM := bcm21553
-TARGET_BOOTLOADER_BOARD_NAME := tassve
-
-# Recovery
-BOARD_BOOTIMAGE_PARTITION_SIZE := 7357568
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 7357568
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 241172480
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 206831616
-BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_LDPI_RECOVERY := true
-
-# Prebuilt kernel NOTE: Delete from package
-TARGET_PREBUILT_KERNEL := device/samsung/tassve/prebuilt/kernel
-
-# Kernel defines
-BOARD_KERNEL_BASE := 0x81600000
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_FORCE_RAMDISK_ADDRESS := 0x82600000
-#TARGET_KERNEL_CONFIG := cyanogenmod_tassve_defconfig
-
-TARGET_OTA_ASSERT_DEVICE := tassve,GT-S5570i,gt-s5570i
-
 # Import the bcm21553-common BoardConfigCommon.mk
 include device/samsung/bcm21553-common/BoardConfigCommon.mk
+
+# Board
+TARGET_BOARD_PLATFORM				:= bcm21553
+TARGET_BOOTLOADER_BOARD_NAME			:= tassve
+
+# Recovery
+BOARD_BOOTIMAGE_PARTITION_SIZE			:= 7357568
+BOARD_RECOVERYIMAGE_PARTITION_SIZE		:= 7357568
+BOARD_SYSTEMIMAGE_PARTITION_SIZE		:= 241172480
+BOARD_USERDATAIMAGE_PARTITION_SIZE		:= 206831616
+BOARD_LDPI_RECOVERY				:= true
+
+# Prebuilt kernel NOTE: Delete from package
+TARGET_PREBUILT_KERNEL				:= device/samsung/tassve/prebuilt/kernel
+#TARGET_KERNEL_CONFIG				:= cyanogenmod_tassve_defconfig
+
+# Kernel defines
+BOARD_KERNEL_BASE				:= 0x81600000
+BOARD_MKBOOTIMG_ARGS				:= --ramdisk_offset 0x01000000
+TARGET_OTA_ASSERT_DEVICE			:= tassve,GT-S5570i,gt-s5570i
+
