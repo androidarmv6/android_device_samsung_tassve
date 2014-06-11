@@ -38,12 +38,3 @@ $(call inherit-product, device/ldpi-common/ldpi.mk)
 # Add device package overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/tassve/overlay
 
-# Prebuilt Kernel - DELETE from the package
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/tassve/prebuilt/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
