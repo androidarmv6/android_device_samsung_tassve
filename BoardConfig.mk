@@ -1,3 +1,4 @@
+#
 # Copyright (C) 2009 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,8 +38,5 @@ BOARD_LDPI_RECOVERY				:= true
 # Kernel config
 TARGET_KERNEL_CONFIG				:= cyanogenmod_tassve_defconfig
 
-# Kernel defines
-BOARD_KERNEL_BASE				:= 0x81600000
-BOARD_MKBOOTIMG_ARGS				:= --ramdisk_offset 0x01000000
+# OTA override
 TARGET_OTA_ASSERT_DEVICE			:= tassve,GT-S5570i,gt-s5570i
-
