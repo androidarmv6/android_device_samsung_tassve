@@ -29,7 +29,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, device/samsung/bcm21553-common/common.mk)
 $(call inherit-product, vendor/samsung/tassve/vendor.mk)
 
-
 # LDPI assets
 PRODUCT_AAPT_CONFIG := normal mdpi ldpi
 PRODUCT_AAPT_PREF_CONFIG := ldpi
