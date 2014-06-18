@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Init files
-PRODUCT_COPY_FILES += \
-    device/samsung/tassve/ramdisk/init.gt-s5570iboard.sensors.rc:root/init.gt-s5570iboard.sensors.rc
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
