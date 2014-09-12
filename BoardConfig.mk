@@ -40,4 +40,4 @@ BOARD_USE_CUSTOM_RECOVERY_FONT			:= "<font_7x16.h>"
 TARGET_KERNEL_CONFIG				:= cyanogenmod_tassve_defconfig
 
 # OTA override
-TARGET_OTA_ASSERT_DEVICE			:= tassve,GT-S5570i,gt-s5570i
+TARGET_OTA_ASSERT_DEVICE			:= tassve,GT-S5570I
