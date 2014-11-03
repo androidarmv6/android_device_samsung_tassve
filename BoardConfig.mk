@@ -41,3 +41,6 @@ TARGET_KERNEL_CONFIG				:= cyanogenmod_tassve_defconfig
 
 # OTA override
 TARGET_OTA_ASSERT_DEVICE			:= tassve,GT-S5570I
+
+# TWRP
+DEVICE_RESOLUTION := 240x320
